@@ -68,7 +68,7 @@ jobs:
 
     - name: Release
       if: ${{ inputs.relname != '' }}
-      uses: softprops/action-gh-release@v1
+      uses: softprops/action-gh-release@v2
       with:
         files: autoortho_lin_*.bin
         tag_name: ${{ inputs.relname }}
@@ -114,7 +114,7 @@ jobs:
 
     - name: Release
       if: ${{ inputs.relname != '' }}
-      uses: softprops/action-gh-release@v1
+      uses: softprops/action-gh-release@v2
       with:
         files: |
           AutoOrtho_*.exe
