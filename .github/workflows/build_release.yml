@@ -44,7 +44,7 @@ jobs:
       VERNAME: ${{ inputs.version }} 
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
    
     - name: Setup 
       run: |
@@ -82,9 +82,9 @@ jobs:
       VERNAME: ${{ inputs.version }} 
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
    
-    - uses: actions/setup-python@v3
+    - uses: actions/setup-python@v4
       with:
         python-version: '3.12'
 
@@ -105,7 +105,7 @@ jobs:
         make win_zip ZIP="7z a" VERSION=${{ env.VERNAME }}
 
     - name: Save artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: winbin
         path: |
