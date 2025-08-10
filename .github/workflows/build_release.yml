@@ -2,6 +2,22 @@ name: Release Shared Workflow
 
 on:
   workflow_dispatch:
+    inputs:
+      relname: 
+        required: false 
+        type: string
+        default: ''
+      version:
+        required: true
+        type: string
+      prerelease:
+        required: false
+        type: boolean
+        default: true
+      internalver:
+        required: false
+        type: string
+        default: ''
   workflow_call:
     inputs:
       relname: 
